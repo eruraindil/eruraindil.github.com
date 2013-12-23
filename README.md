@@ -1,2 +1,0 @@
-eruraindil.github.com
-=====================
