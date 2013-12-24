@@ -1,0 +1,24 @@
+- name: DynDNS Updater
+  slug: dyndns-updater
+  url: http://github.com/eruraindil/dyndns-updater
+  summary: Lorem ispum.
+
+- name: Student Volunteer Connections of Guelph
+  slug: svc-website
+  url: http://www.uoguelph.ca/svc/
+  summary: Lorem ispum.
+
+- name: WebAdvisor Scraper
+  slug: webadvisor-scraper
+  url: http://github.com/eruraindil/webadvisor-scraper
+  summary: Lorem ispum.
+
+- name: Sick Beard Mobile
+  slug: sickbeard-mobile
+  url: http://github.com/eruraindil/sickbeard-mobile
+  summary: Lorem ispum.
+
+- name: SVC Dashing Dashboard
+  slug: svc-dashing
+  url: http://github.com/eruraindil/svc-dashing
+  summary: Lorem ispum.

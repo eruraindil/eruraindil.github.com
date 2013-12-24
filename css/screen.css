@@ -1,6 +1,100 @@
 /* 2013 Matthew Roberts */
 
 body {
-	background:#333;
-	color:#FFF;
+  background: url(../img/background.jpg) no-repeat center top fixed;
+  padding-top: 70px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-variant: small-caps;
+}
+
+h1.fff_tusjbold {
+  font-family: 'fff_tusjbold';
+  font-variant: normal;
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+
+  font-size:72px;
+}
+
+#home-content h1 small {
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-variant: small-caps;
+  text-transform: uppercase;
+}
+
+h1,h2 {
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #C00;
+}
+
+h3 {
+  text-transform: lowercase;
+}
+
+nav {
+  text-transform: uppercase;
+}
+
+#content, #home-content {
+  background-color: #f8f8f8;
+  border: 1px solid;
+  border-color: #e7e7e7;
+  border-radius: 4px;
+}
+
+#home-content {
+  text-align: center;
+  margin-top: 130px;
+}
+
+#home-content h2 {
+  text-align: left;
+}
+
+#home-content .col-md-6 {
+  text-align: left;
+}
+
+#bio-pic {
+  margin: 0 0 10px 10px;
+}
+
+.thumbnail .caption {
+  text-align: center;
+}
+
+.nav-justified>li>a {
+  font-variant: small-caps;
+}
+
+.nav-justified>li.active>a {
+  color: #333 !important;
+}
+
+#footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#sm-icons {
+  text-align: right;
+}
+
+@media(max-width:768px){
+  #home-content {
+    margin-top:0;
+  }
+
+  #bio-pic {
+    float: none;
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding-top: 10px;
+  }
 }
