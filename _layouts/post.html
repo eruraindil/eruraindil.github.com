@@ -5,12 +5,12 @@ layout: default
 <div class="row">
 	<div class="col-md-4">
 		{% for post in site.posts %}
-		{{postdate = Date.parse(post.date)}}
+		{% postdate = Date.parse(post.date) %}
 		{% if prevpostdate == null || postdate.year!=prevpostdate.year %} <h3>{{ post.date | date_to_string }}</h3> {% endif %}
 		<ul>
 		      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 		</ul>
-		{{prevpostdate = postdate}}
+		{% prevpostdate = postdate %}
 		{% endfor %}
 	</div>
 	<div class="col-md-8">
