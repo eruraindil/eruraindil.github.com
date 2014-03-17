@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "A New Year"
+date:   2014-03-16 15:10:30
+---
+
+A new year, time to revive this project, I want to get this working!
+
+After some deliberation, I have decided to set up my website and blog as a single unit, and will be using [Jeykll](http://jekyllrb.com/) and [GitHub Pages](http://pages.github.com/) to do so.
+
+I have ported my old tumblr blog to markdown and Jeykll using the provided converter, which I was less than thrilled about, it did not keep very much of my formating, and completely screwed up all the links. I have tried my best to rebuild it - though it took longer than I wanted.

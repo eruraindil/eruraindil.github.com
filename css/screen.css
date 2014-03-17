@@ -37,6 +37,11 @@ h3 {
   text-transform: lowercase;
 }
 
+img {
+  max-width: 100%;
+  height:auto;
+}
+
 nav {
   text-transform: uppercase;
 }
