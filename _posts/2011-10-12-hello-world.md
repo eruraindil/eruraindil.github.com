@@ -5,6 +5,7 @@ date: '2011-10-12T17:02:00-04:00'
 tags:
 - Announcement
 tumblr_url: http://blog.mroberts.me/post/11365966936/hello-world
+menu: blog
 ---
  
 I have decided to follow in the steps of my business partner [Malcolm McCulloch](http://malcolmm.cc/), and friend [Wesley Ellis](http://blog.tahnok.me/), and add a blog to my personal site.

@@ -7,6 +7,7 @@ tags:
 - School
 - Notetaking
 tumblr_url: http://blog.mroberts.me/post/12198614917/a-wiki-yeah
+menu: blog
 ---
 A Wiki? Yeah!
 

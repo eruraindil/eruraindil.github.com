@@ -3,7 +3,7 @@
   <div class="col-xs-6 col-xs-offset-3">
     <ul class="nav nav-justified">
       {% for item in site.data.menu %}
-        <li><a href="{{ item.slug }}">{{ item.title }}</a></li>
+        <li{% if page.menu == item.title %} class="active"{% endif %}><a href="{{ item.slug }}">{{ item.title }}</a></li>
       {% endfor %}
     </ul>
   </div>

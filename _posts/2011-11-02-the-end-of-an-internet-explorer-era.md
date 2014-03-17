@@ -8,6 +8,7 @@ tags:
 - internet explorer
 - web standards
 tumblr_url: http://blog.mroberts.me/post/12254133543/the-end-of-an-internet-explorer-era
+menu: blog
 ---
 It’s about time! According to [Arstechnica](http://arst.ch/rg6), which cites [http://www.netmarketshare.com](http://www.netmarketshare.com), Internet Explorer has finally dropped below 50% browser market share. As a web designer, this comes as a great relief.
 

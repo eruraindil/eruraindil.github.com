@@ -9,6 +9,7 @@ tags:
 - election fraud
 - political analysis
 tumblr_url: http://blog.mroberts.me/post/18516984032/on-the-decline-of-our-political-environment
+menu: blog
 ---
 
 ![CBC This week in politics](http://www.cbc.ca/photos/galleries/1663/1663_32273_web_8column.jpg)

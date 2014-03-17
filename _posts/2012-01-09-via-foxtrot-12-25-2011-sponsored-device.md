@@ -4,6 +4,7 @@ title: ! 'BlackBerry Playbook'
 date: '2012-01-09T18:08:21-05:00'
 tags: []
 tumblr_url: http://blog.mroberts.me/post/15587070239/via-foxtrot-12-25-2011-sponsored-device
+menu: blog
 ---
 
 ![sponsored device by foxtrot](http://31.media.tumblr.com/tumblr_lxk09yhnTc1r4dasoo1_500.gif)

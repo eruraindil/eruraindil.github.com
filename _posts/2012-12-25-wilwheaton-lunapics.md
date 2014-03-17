@@ -1,9 +1,10 @@
 ---
 layout: post
-title: '"Can I touch your butt” in Elvish'
+title: '"Can I touch your butt" in Elvish'
 date: '2012-12-25T10:57:00-05:00'
 tags: []
 tumblr_url: http://blog.mroberts.me/post/38794606613/wilwheaton-lunapics
+menu: blog
 ---
 
 No! You people are all wrong. That is Quenya Tengwar, not Sindarin Tengwar! If you are going to write in Sindarin, use the proper alphabet! Sindarin doesn’t use tehtar for vowels. Tolkien newbs.

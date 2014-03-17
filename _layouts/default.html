@@ -38,8 +38,7 @@
             <div class="collapse navbar-collapse" id="navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                 {% for item in site.data.menu %}
-                  <li><a href="{{ item.slug }}">{{ item.title }}</a></li>
-                  <!-- <li{% if page.title == item.title %} class="active"{% endif %}><a href="{{ item.slug }}">{{ item.title }}</a></li> -->
+                  <li{% if page.menu == item.title %} class="active"{% endif %}><a href="{{ item.slug }}">{{ item.title }}</a></li>
                 {% endfor %}
               </ul>
             </div><!-- /.navbar-collapse -->

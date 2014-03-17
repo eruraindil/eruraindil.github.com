@@ -6,6 +6,7 @@ tags:
 - space
 - music
 tumblr_url: http://blog.mroberts.me/post/17613014533/scored-by-bear-mccreary-www-bearmccreary-com
+menu: blog
 ---
 		
 I have always loved space.
