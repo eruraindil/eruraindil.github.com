@@ -3,7 +3,7 @@ layout: full-page
 ---
 
 <div class="row">
-	<div class="col-md-4">
+	<div class="col-md-3">
 		{% for post in site.posts %}
 
 			{% assign postdate_year = post.date | date: "%Y" %}
@@ -15,7 +15,7 @@ layout: full-page
 					</ul>
 				{% endif %}
 
-				<h3>{{ postdate_year }}</h3>
+				<h2>{{ postdate_year }}</h2>
 			{% endif %}
 			
 			{% if (postdate_mon != prevpostdate_mon) or (postdate_mon == prevpostdate_mon and postdate_year != prevpostdate_year) %}
@@ -24,7 +24,7 @@ layout: full-page
 					</ul>
 				{% endif %}
 
-				<h4>{{ postdate_mon }}</h4>
+				<h3>{{ postdate_mon }}</h3>
 				<ul>
 			{% endif %}
 
@@ -35,7 +35,7 @@ layout: full-page
 
 		{% endfor %}
 	</div>
-	<div class="col-md-8">
+	<div class="col-md-9">
 		{{ content }}
 	</div>
 </div>
