@@ -1,6 +1,6 @@
-- name: DynDNS Updater
-  slug: dyndns-updater
-  url: http://github.com/eruraindil/dyndns-updater
+- name: Curtain Call Productions
+  slug: curtain-call
+  url: http://www.uoguelph.ca/~curtain/
   summary: Lorem ispum.
 
 - name: Student Volunteer Connections of Guelph
@@ -11,12 +11,12 @@
 - name: WebAdvisor Scraper
   slug: webadvisor-scraper
   url: http://github.com/eruraindil/webadvisor-scraper
-  summary: Lorem ispum.
+  summary: "Scrapes WebAdvisor for class times and locations to create a complete list of all classrooms and their free status."
 
 - name: Sick Beard Mobile
   slug: sickbeard-mobile
   url: http://github.com/eruraindil/sickbeard-mobile
-  summary: Lorem ispum.
+  summary: "Mobile web app version of the PVR client by midgetspy, using the JQuery Mobile framework."
 
 - name: SVC Dashing Dashboard
   slug: svc-dashing

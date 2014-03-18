@@ -55,7 +55,7 @@ nav {
 
 #home-content {
   text-align: center;
-  margin-top: 130px;
+  margin-top: 50px;
 }
 
 #home-content h2 {
@@ -87,6 +87,10 @@ nav {
   margin-top: 20px;
 }
 
+hr#foot {
+  clear:both;
+}
+
 #sm-icons {
   text-align: right;
 }
@@ -101,5 +105,13 @@ nav {
     width: 100%;
     margin: 0 0 10px 0;
     padding-top: 10px;
+  }
+
+  #contact-page {
+    text-align:center;
+  }
+
+  #contact-page div.row {
+    margin:0 auto;
   }
 }
