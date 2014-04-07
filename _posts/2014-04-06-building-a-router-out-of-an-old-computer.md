@@ -34,6 +34,8 @@ I am going to go through the steps I followed to complete this project, you can 
 
 At this point the fun begins. If you're following this as a guide, you should have a modern installation of Ubuntu Server Edition (Debian would probably work too, but no guarantees) with 2 Ethernet cards.
 
+> NOTE: This document is provided "as is" without warranty of any kind. I take no responsibility for any loss or damage arising from the use of this document.
+
 ###Network Design
 
  * My network domain is `lan.example.com`.
