@@ -10,17 +10,103 @@
 		<link rel="stylesheet" href="/css/syntax.css">
 
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/dist/fonts/ffftusj_bold_macroman/stylesheet.css">
 		<link rel="stylesheet" href="/css/screen.css">
+		<script src="/static/h5bp/js/vendor/modernizr-2.8.3.min.js"></script>
+	</head>
+	<body  id="skrollr-body" data-230-start="padding-top:70px;" data-250-start="padding-top:50px;">
+    <div
+		class="parallax-image-wrapper parallax-image-wrapper-100"
+		data-anchor-target=".gap"
+		data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+		data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+      <div
+        class="parallax-image parallax-image-100"
+        style="background-image:url(/img/homepage.jpg)"
+        data-anchor-target=".gap"
+        data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+        data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+      ></div>
+      <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
+    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="nav" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"
+             data-230-start="height:70px;padding-top:25px;" 
+             data-250-start="height:50px;padding-top:15px;"
+             >
+            {{site.name}}
+            {% if page.title != "Matthew Roberts" %}
+            <span data-230-start="display:none;" 
+                  data-250-start="display:inline;">
+              {{page.title}}
+            </span>
+            {% endif %}
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            {% for item in site.data.menu %}
+              <li{% if page.menu == item.title %} class="active"{% endif %}>
+                <a href="{{ item.slug }}"
+                 data-230-start="height:70px;padding-top:25px;" 
+                 data-250-start="height:50px;padding-top:15px;"
+                 >{{ item.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row gap" id="header">
+        <div class="col-md-12">
+          <h1 id="page_title">{{ page.title }}
+          {% if page.title == "Matthew Roberts" %}
+            <small>BA (Hons)</small>
+          {% endif %}
+          </h1>
+        </div>
+      </div>
+      <div class="row"> <!-- content -->
+        {{ content }}
+      </div>
+      <div class="row" id="sm-icons">
+        <div class="col-md-10 col-md-offset-1" id="sm-icons">
+          <a href="http://twitter.com/eruraindil"><i class="fa fa-twitter-square fa-5x"></i></a>
+          <a href="http://www.facebook.com/eruraindil"><i class="fa fa-facebook-square fa-5x"></i></a>
+          <a href="http://www.linkedin.com/pub/matthew-roberts-rhb/28/b55/115"><i class="fa fa-linkedin-square fa-5x"></i></a>
+          <a href="https://plus.google.com/105453048569831500209"><i class="fa fa-google-plus-square fa-5x"></i></a>
+          <a href="https://github.com/eruraindil"><i class="fa fa-github-square fa-5x"></i></a>
+        </div>
+      </div>
+    </div>
 
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-		<![endif]-->
-		<script type="text/javascript">
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script>window.jQuery || document.write('<script src="/static/jquery.js"><\/script>')</script>
+		<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/skrollr.js"></script>
+    <script src="/static/jquery.fitText.js"></script>
+    <script src="/static/flowtype.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('body').flowtype({
+          minFont : 14,
+          maxFont : 18
+        });
+      });
+      var s = skrollr.init();
+      $("#page_title").fitText(1.1);
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-23281367-1']);
 		  _gaq.push(['_trackPageview']);
@@ -30,51 +116,5 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 		</script>
-	</head>
-	<body>
-		<nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<a class="navbar-brand" href="/">{{site.name}}</a>
-						</div>
-						<div class="collapse navbar-collapse" id="navbar-collapse-1">
-							<ul class="nav navbar-nav navbar-right">
-								{% for item in site.data.menu %}
-									<li{% if page.menu == item.title %} class="active"{% endif %}><a href="{{ item.slug }}">{{ item.title }}</a></li>
-								{% endfor %}
-							</ul>
-						</div><!-- /.navbar-collapse -->
-					</div>
-				</div>
-			</div>
-		</nav>
-		<div class="container">
-			<div class="row"> <!-- content -->
-				{{ content }}
-			</div>
-			<div class="row" id="sm-icons">
-				<div class="col-md-10 col-md-offset-1" id="sm-icons">
-					<a href="http://twitter.com/eruraindil"><img src="/img/twitter_16x16.png" /></a>
-					<a href="http://www.facebook.com/eruraindil"><img src="/img/facebook_16x16.png" /></a>
-					<a href="http://www.linkedin.com/pub/matthew-roberts-rhb/28/b55/115"><img src="/img/linkedin_16x16.png" /></a>
-					<a href="https://plus.google.com/105453048569831500209"><img src="/img/gplus_16x16.png" /></a>
-					<a href="https://github.com/eruraindil"><img src="/img/github_16x16.png" /></a>
-				</div>
-			</div>
-		</div>
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script>window.jQuery || document.write('<script src="/dist/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="/dist/js/bootstrap.min.js"></script>
 	</body>
 </html>
