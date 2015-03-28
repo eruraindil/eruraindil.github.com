@@ -129,7 +129,7 @@ hr#foot {
 #sm-icons {
   text-align: center;
 }
-#sm-icons a {
+#sm-icons, #sm-icons a {
   color: #900;
 }
 
