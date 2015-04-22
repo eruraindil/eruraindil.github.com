@@ -46,12 +46,17 @@
              >
             {{site.name}}
             {% if page.title != "Matthew Roberts" %}
-            <span data-230-start="display:none;" 
-                  data-250-start="display:inline;">
-              {{page.title}}
-            </span>
+            </a>
+            <div class="navbar-brand"
+              data-230-start="display:none;" 
+              data-250-start="display:inline;">
+              /
+              <a class="navbar-link" href="{{ item.slug }}">
+                {{page.title}}
+              </a>
+            </div>
+              
             {% endif %}
-          </a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
