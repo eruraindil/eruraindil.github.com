@@ -11,7 +11,7 @@ One of my major projects has always been my home network. [My last post](/2014/0
 
 As fun as my homemade router was, I was constantly worried about its security and stability. I also wanted more features like QoS which I know could be done with iptables. After reading man pages and tutorials for a couple hours I went looking and I found [pfSense](https://www.pfsense.org/): an open source enterprise level router/firewall system. The features match our pricy hardware firewall at work, but this one is free? Perfect, I'll take it.
 
-In the 8 or so months I have been using it, I have been really happy with it. There have been a few issues on updates with the traffic shaper (QoS) (which could be my fault), but other than that, it has worked great and does everything I want it to. It has many features, and even optional packages like bind9 to extend the base functionality of the system (which uses dnsmasq for DNS OOTB).
+In the 8 or so months I have been using it, I have been really happy with it. There have been a few issues on updates with the traffic shaper (QoS) (which could be my fault - I haven't actually read the documentation), but other than that, it has worked great and does everything I want it to. It has many features, and even optional packages like bind9 to extend the base functionality of the system (which uses dnsmasq for DNS OOTB).
 
 My home network is growing and getting better. I ditched my consumer grade wifi router - and with the recent addition of some new [Raspberry Pi 2s](http://raspberrypi.org/) I am going to need a bigger switch soon.
 
