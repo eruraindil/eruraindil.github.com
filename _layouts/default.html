@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,7 +12,6 @@
 		<!-- Custom CSS -->
     <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/dist/fonts/ffftusj_bold_macroman/stylesheet.css">
 		<link rel="stylesheet" href="/css/screen.css">
 		<script src="/static/h5bp/js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
@@ -41,21 +40,21 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/"
-             data-230-start="height:70px;padding-top:25px;" 
+             data-230-start="height:70px;padding-top:25px;"
              data-250-start="height:50px;padding-top:15px;"
              >
             {{site.name}}
             {% if page.title != "Matthew Roberts" %}
             </a>
             <div class="navbar-brand"
-              data-230-start="display:none;" 
+              data-230-start="display:none;"
               data-250-start="display:inline;">
               /
               <a class="navbar-link" href="{{ item.slug }}">
                 {{page.title}}
               </a>
             </div>
-              
+
             {% endif %}
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
@@ -63,7 +62,7 @@
             {% for item in site.data.menu %}
               <li{% if page.menu == item.title %} class="active"{% endif %}>
                 <a href="{{ item.slug }}"
-                 data-230-start="height:70px;padding-top:25px;" 
+                 data-230-start="height:70px;padding-top:25px;"
                  data-250-start="height:50px;padding-top:15px;"
                  >{{ item.title }}</a>
               </li>
