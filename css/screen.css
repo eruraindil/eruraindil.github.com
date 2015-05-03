@@ -1,10 +1,10 @@
 /* 2013 Matthew Roberts */
-@import url(http://fonts.googleapis.com/css?family=Oswald:700|Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700|Montserrat);
 
 body {
   background: #333;
   padding-top: 70px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-nav>li>a {
@@ -133,7 +133,16 @@ hr#foot {
   color: #900;
 }
 
+.blog-toggle {
+  display: none;
+}
+
+.blog-menu {
+  display: block;
+}
+
 @media(max-width:768px){
+
   #header {
     height: auto;
   }
@@ -141,11 +150,11 @@ hr#foot {
   #header h1 {
     position: relative;
   }
-  
+
   .navbar-nav>li>a {
     height: 50px;
   }
-  
+
   #bio-pic {
     float: none;
     width: 100%;
@@ -156,6 +165,23 @@ hr#foot {
   #contact-page {
     text-align:center;
   }
+
+  .blog-toggle {
+    display: block;
+  }
+
+  .blog-menu {
+    display: none;
+  }
+}
+
+.skrollr-mobile .navbar-brand, .skrollr-mobile .navbar-nav li a {
+  height:50px !important;
+  padding-top:15px !important;
+}
+
+.skrollr-mobile .navbar-toggle {
+  margin-top:8px !important;
 }
 
 .parallax-image-wrapper {

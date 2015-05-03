@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>{{ page.title }} - {{ site.name }}</title>
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- syntax highlighting CSS -->
 		<link rel="stylesheet" href="/css/syntax.css">
@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="/css/screen.css">
 		<script src="/static/h5bp/js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
-	<body  id="skrollr-body" data-230-start="padding-top:70px;" data-250-start="padding-top:50px;">
+	<body id="skrollr-body" data-230-start="padding-top:70px;" data-250-start="padding-top:50px;">
     <div
 		class="parallax-image-wrapper parallax-image-wrapper-100"
 		data-anchor-target=".gap"
@@ -33,29 +33,32 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" id="nav" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1"
+						data-230-start="margin-top:18px;"
+						data-250-start="margin-top:8px;"
+					>
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/"
-             data-230-start="height:70px;padding-top:25px;"
-             data-250-start="height:50px;padding-top:15px;"
-             >
+            data-230-start="height:70px;padding-top:25px;"
+            data-250-start="height:50px;padding-top:15px;"
+          >
             {{site.name}}
-            {% if page.title != "Matthew Roberts" %}
+					</a>
+          {% if page.title != "Matthew Roberts" %}
+          <div class="navbar-brand"
+            data-230-start="display:none;"
+            data-250-start="display:inline;"
+					>
+            /
+            <a class="navbar-link" href="{{ item.slug }}">
+              {{page.title}}
             </a>
-            <div class="navbar-brand"
-              data-230-start="display:none;"
-              data-250-start="display:inline;">
-              /
-              <a class="navbar-link" href="{{ item.slug }}">
-                {{page.title}}
-              </a>
-            </div>
-
-            {% endif %}
+          </div>
+					{% endif %}
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
@@ -103,6 +106,9 @@
 		<script>window.jQuery || document.write('<script src="/static/jquery.js"><\/script>')</script>
 		<script src="/static/bootstrap/js/bootstrap.min.js"></script>
     <script src="/static/skrollr.js"></script>
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="/static/skrollr.ie.js"></script>
+		<![endif]-->
     <script src="/static/jquery.fitText.js"></script>
     <script src="/static/flowtype.js"></script>
     <script type="text/javascript">
@@ -112,7 +118,9 @@
           maxFont : 18
         });
       });
-      var s = skrollr.init();
+      var sk = skrollr.init({
+				smoothScrolling: 'false'
+			});
       $("#page_title").fitText(1.1);
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-23281367-1']);
