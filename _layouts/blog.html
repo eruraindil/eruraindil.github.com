@@ -3,11 +3,11 @@ layout: page
 ---
 
 <div class="row">
-	<div class="col-md-3">
-		<button type="button" class="btn btn-default btn-block blog-toggle" data-toggle="collapse" data-target="#blog-collapse-1">
+	<div class="small-12 medium-3 columns">
+		<button type="button" id="showArchive" class="show-for-small-only button expand">
       Archive
 		</button>
-		<div id="blog-collapse-1" class="collapse blog-menu">
+		<div id="blog-archive">
 			{% for post in site.posts %}
 
 				{% assign postdate_year = post.date | date: "%Y" %}
@@ -40,7 +40,7 @@ layout: page
 			{% endfor %}
 		</div>
 	</div>
-	<div class="col-md-9">
+	<div id="blog-content" class="small-12 medium-9 columns">
 		{{ content }}
 	</div>
 </div>

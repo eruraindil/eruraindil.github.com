@@ -1,14 +1,14 @@
-- title: home
-  slug: /
+# - title: home
+#   slug: /
 
 - title: bio
   slug: /bio/
 
 - title: resum&eacute;
   slug: /resume/
-
-- title: contact
-  slug: /contact/
+# 
+# - title: contact
+#   slug: /contact/
 
 - title: blog
   slug: /blog/

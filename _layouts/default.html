@@ -3,133 +3,68 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>{{ page.title }} - {{ site.name }}</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- syntax highlighting CSS -->
 		<link rel="stylesheet" href="/css/syntax.css">
-
 		<!-- Custom CSS -->
-    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/css/screen.css">
-		<script src="/static/h5bp/js/vendor/modernizr-2.8.3.min.js"></script>
+		<link href="/static/foundation/css/normalize.css" rel="stylesheet">
+    <link href="/static/foundation/css/foundation.min.css" rel="stylesheet">
+    <link href="/static/animate.css" rel="stylesheet">
+    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Anton|Oswald' rel='stylesheet' type='text/css'>
+    <link href="/css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="/static/html5shiv.js"></script>
+      <script src="/static/respond.js"></script>
+    <![endif]-->
 	</head>
-	<body id="skrollr-body" data-230-start="padding-top:70px;" data-250-start="padding-top:50px;">
-    <div
-		class="parallax-image-wrapper parallax-image-wrapper-100"
-		data-anchor-target=".gap"
-		data-bottom-top="transform:translate3d(0px, 200%, 0px)"
-		data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-      <div
-        class="parallax-image parallax-image-100"
-        style="background-image:url(/img/homepage.jpg)"
-        data-anchor-target=".gap"
-        data-bottom-top="transform: translate3d(0px, -80%, 0px);"
-        data-top-bottom="transform: translate3d(0px, 80%, 0px);"
-      ></div>
-      <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
-    </div>
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="nav" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1"
-						data-230-start="margin-top:18px;"
-						data-250-start="margin-top:8px;"
-					>
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/"
-            data-230-start="height:70px;padding-top:25px;"
-            data-250-start="height:50px;padding-top:15px;"
-          >
-            {{site.name}}
-					</a>
-          {% if page.title != "Matthew Roberts" %}
-          <div class="navbar-brand"
-            data-230-start="display:none;"
-            data-250-start="display:inline;"
-					>
-            /
-            <a class="navbar-link" href="{{ item.slug }}">
-              {{page.title}}
-            </a>
-          </div>
-					{% endif %}
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            {% for item in site.data.menu %}
-              <li{% if page.menu == item.title %} class="active"{% endif %}>
-                <a href="{{ item.slug }}"
-                 data-230-start="height:70px;padding-top:25px;"
-                 data-250-start="height:50px;padding-top:15px;"
-                 >{{ item.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div>
-    </nav>
-    <div class="container-fluid">
-      <div class="row gap" id="header">
-        <div class="col-md-12">
-          <h1 id="page_title">{{ page.title }}
-          {% if page.title == "Matthew Roberts" %}
-            <small>BA (Hons)</small>
-          {% endif %}
-          </h1>
-        </div>
-      </div>
-      <div class="row"> <!-- content -->
-        {{ content }}
-      </div>
-      <div class="row" id="sm-icons">
-        <div class="col-md-10 col-md-offset-1" id="sm-icons">
-          <a href="http://twitter.com/eruraindil"><i class="fa fa-twitter-square fa-5x"></i></a>
-          <a href="http://www.facebook.com/eruraindil"><i class="fa fa-facebook-square fa-5x"></i></a>
-          <a href="http://www.linkedin.com/pub/matthew-roberts-rhb/28/b55/115"><i class="fa fa-linkedin-square fa-5x"></i></a>
-          <a href="https://plus.google.com/105453048569831500209"><i class="fa fa-google-plus-square fa-5x"></i></a>
-          <a href="https://github.com/eruraindil"><i class="fa fa-github-square fa-5x"></i></a>
-        </div>
-        <div class="col-md-10 col-md-offset-1">
-          <i class="fa fa-google-plus-square"></i> <a href="https://plus.google.com/107642477432007236757" rel="publisher">Google+</a> Business</a>
-        </div>
-      </div>
-    </div>
+	<body>
+  	{{ content }}
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script>window.jQuery || document.write('<script src="/static/jquery.js"><\/script>')</script>
-		<script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/static/skrollr.js"></script>
-		<!--[if lt IE 9]>
-		<script type="text/javascript" src="/static/skrollr.ie.js"></script>
-		<![endif]-->
-    <script src="/static/jquery.fitText.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/static/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/foundation/js/foundation.min.js"></script>
+    <!-- <script src="/static/typist.js"></script> -->
+    <!-- <script src="/static/jquery.fitText.js"></script> -->
     <script src="/static/flowtype.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
+    <script src="/static/wow.js"></script>
+    <script>
+      $(function() {
+        // new Typist(document.querySelector("#typist-element"), {
+        //   letterInterval: 60,
+        //   textInterval:   4000
+        // });
+        $('a[href=#more]').click(function(){
+          event.preventDefault();
+          $('html, body').animate({scrollTop: $('#more').offset().top}, 'slow');
+        });
+        $('a[href=#contact]').click(function(){
+          event.preventDefault();
+          $('html, body').animate({scrollTop: $('#contact').offset().top}, 'slow');
+        });
         $('body').flowtype({
-          minFont : 14,
+          minFont : 12,
           maxFont : 18
         });
+
+				$('#showArchive').click(function(){
+					$('#blog-archive').toggle();
+				});
+        // $("header h1").fitText(0.5);
+        // $("#more").fitText(0.8);
+        // $(window).resize('resizeBackground');
+        // function resizeBackground() {
+        //   $('header').height($(window).height());
+        // }
+        // resizeBackground();
       });
-      var sk = skrollr.init({
-				smoothScrolling: 'false'
-			});
-      $("#page_title").fitText(1.1);
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-23281367-1']);
-		  _gaq.push(['_trackPageview']);
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-		</script>
+      new WOW().init();
+      $(document).foundation();
+    </script>
 	</body>
 </html>

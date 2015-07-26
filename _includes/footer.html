@@ -1,11 +1,71 @@
-<hr id="foot">
-<!--<div class="row">
-  <div class="col-xs-6 col-xs-offset-3">
-    <ul class="nav nav-justified">
-      {% for item in site.data.menu %}
-        <li{% if page.menu == item.title %} class="active"{% endif %}><a href="{{ item.slug }}">{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
+<footer>
+  <div class="row">
+    <div class="small-12 medium-6 columns">
+      <nav class="left">
+        <ul class="inline-list">
+          <li role="presentation"><a href="http://www.mroberts.me" target="_blank">&copy; Matthew Roberts</a></li>
+          <!--<li role="presentation"><a href="#" data-reveal-id="privacy">Privacy Policy</a></li>-->
+        </ul>
+      </nav>
+    </div>
+    <div class="small-12 medium-6 columns">
+      <nav class="right">
+        <ul class="inline-list">
+          <li role="presentation"><a href='https://twitter.com/eruraindil' target='_blank'><i class='fa fa-twitter-square'></i></a></li>
+          <li role="presentation"><a href='https://www.facebook.com/eruraindil' target='_blank'><i class='fa fa-facebook-square'></i></a></li>
+          <li role="presentation"><a href='http://www.linkedin.com/pub/matthew-roberts-rhb/28/b55/115' target='_blank'><i class='fa fa-linkedin-square'></i></a></li>
+          <li role="presentation"><a href='https://plus.google.com/105453048569831500209' target='_blank'><i class='fa fa-google-plus-square'></i></a></li>
+          <li role="presentation"><a href='https://github.com/eruraindil' target='_blank'><i class='fa fa-github-square'></i></a></li>
+          <li role="presentation"><a href="#" data-reveal-id="contact"><i class="fa fa-envelope-o"></i></a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
-</div>-->
-<p id="footer"><small>&copy;{{ date }} Matthew Roberts<!--<abbr title="Yep, you can trademark anything that you claim ownership of. (It is meaningless to put a trademark on a name because it is implicitly yours though.)">-->&trade;<!--</abbr>--></small></p>
+</footer>
+
+<div id="privacy" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle">Privacy Policy</h2>
+  <p>We collect personal information from our users in the regular course of doing business.</p>
+  <h3>what personal information do you collect about me?</h3>
+  <p>When you visit our web site, we also collect the following information about you, through Google Analytics, based on Display Advertising by Google:</p>
+  <ul>
+    <li>information about your computer, including your IP address, the type of operating system and browser you use, and your computer's location (coarse-grain)</li>
+    <li>what pages you visit on our site and what links you click on</li>
+    <li>what other sites you've visited recently</li>
+    <li>basic demographic information, including approximate age, gender, and interests</li>
+  </ul>
+  <p>We do not merge personally-identifiable information with non-personally identifiable information collected.</p>
+  <h2>how do you use this information?</h2>
+  <ul>
+    <li>customer service</li>
+    <li>marketing</li>
+    <li>product improvement</li>
+  </ul>
+  <p>We will also disclose your personal information if we are required by law to do so.</p>
+  <h2>how do you get my consent?</h2>
+  <p>By using this site, you are consenting to automatic collection of your information by Google Analytics.</p>
+  <p>Saying no is called "opting out." By opting out, you can tell us not to collect the information and/or not to share it with others.</p>
+  <h2>how do I opt out?</h2>
+  <p>If you provide us with information about your preferences and opinions and you do not want that information to be used for marketing purposes please contact us at the address below.</p>
+  <p>if you would not like our website to collect information about you:</p>
+  <ul>
+    <li>You may opt out of Google Analytics for Display Advertising by using <a target="_blank" href="https://www.google.com/settings/ads">Google's Ads Settings</a>, and choosing to <strong>Opt out</strong> of interest-based ads on Google and across the web.</li>
+    <li>You may opt out of Google Analytics reporting entirely by following the instructions at <a target="_blank" href="https://tools.google.com/dlpage/gaoptout/">Google's Analytics Opt-Out</a> page.</li>
+  </ul>
+  <h2>how do I get more information?</h2>
+  <p>Please contact me, via the contact page.</p>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+<div id="contact" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <h2 id="modalTitle">Contact Info</h2>
+  <p class="lead">(639) 471-0016 - <a href="mailto:contact@mroberts.me">contact@mroberts.me</a> - <a href="http://keyserver.ubuntu.com:11371/pks/lookup?op=get&amp;fingerprint=on&amp;search=0x210E343B4D1B0E10"><abbr title="Pretty Good Privacy" class="initialism">PGP</abbr></a></p>
+  <ul class="inline-list">
+    <li role="presentation"><a href='https://twitter.com/eruraindil' target='_blank'><i class='fa fa-4x fa-twitter-square'></i></a></li>
+    <li role="presentation"><a href='https://www.facebook.com/eruraindil' target='_blank'><i class='fa fa-4x fa-facebook-square'></i></a></li>
+    <li role="presentation"><a href='http://www.linkedin.com/pub/matthew-roberts-rhb/28/b55/115' target='_blank'><i class='fa fa-4x fa-linkedin-square'></i></a></li>
+    <li role="presentation"><a href='https://plus.google.com/105453048569831500209' target='_blank'><i class='fa fa-4x fa-google-plus-square'></i></a></li>
+    <li role="presentation"><a href='https://github.com/eruraindil' target='_blank'><i class='fa fa-4x fa-github-square'></i></a></li>
+  </ul>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
