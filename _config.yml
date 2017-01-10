@@ -1,6 +1,37 @@
-name: mroberts.me
-markdown: redcarpet
-pygments: true
+# Site settings
+title: Matthew Roberts
+phone: (639) 471-0016
+email: contact@mroberts.me
+pgp: http://keyserver.ubuntu.com:11371/pks/lookup?op=get&amp;fingerprint=on&amp;search=0x210E343B4D1B0E10
+url: https://mroberts.me
+description: "Web Developer and Theatre Technician"
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary-dark: '#000000'
+  links: '#219ab3'
+  links-hover: '#11505d'
+
+# Footer settings
+footer: Matthew Roberts
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/eruraindil
+  - title: facebook
+    url: https://www.facebook.com/eruraindil
+  - title: linkedin
+    url: http://www.linkedin.com/pub/matthew-roberts-rhb/28/b55/115
+  - title: google-plus
+    url: https://plus.google.com/105453048569831500209
+  - title: github
+    url: https://github.com/eruraindil
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+gems: [jekyll-paginate, jekyll-feed]
 paginate: 5
 paginate_path: "blog/page:num"
 exclude: ["static"]

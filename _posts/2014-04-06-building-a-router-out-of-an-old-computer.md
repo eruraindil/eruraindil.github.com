@@ -14,9 +14,9 @@ I decided to do what any sane person would do, and build my own router because l
 
 I am going to go through the steps I followed to complete this project, you can jump to them [here](#installation). Sources will be listed at the bottom of the page. But first, a little prep.
 
-##Prep
+## Prep
 
-###What is this old computer running on?
+### What is this old computer running on?
  1. I started up the computer and was welcomed by: ![Ubuntu 8.10 boot splash](/assets/boot-screen.jpg "source: http://ubuntuforums.org/showthread.php?t=225458")
  1. To which I thought: ![Now that's something I haven't seen in a long time.](/assets/meme-ubuntu-8-10-boot-screen.jpg)
  1. Fsck started up, because yeah it *has* been over 120 days since last boot, churned for a bit and then errors filled the screen and the hard drive crashed. Oh well, there probably wasn't anything important on it anyway.
@@ -24,19 +24,19 @@ I am going to go through the steps I followed to complete this project, you can 
  1. While I was installing the new hard drive, I also popped the PCI Ethernet card in, and started torrenting Ubuntu 14.04 Server Edition.
  	* I know there's a lot of controversy over the direction that Ubuntu is going recently, and on the desktop edition I would agree, but as far as I'm concerned, the server edition is solid, I like the community resources, and APT package management.
 
-###Base Installation
+### Base Installation
  1. Before I installed the server OS, I wanted to make sure that the hardware supported the Ethernet card, so I installed a copy of Xubuntu 13.10 onto a USB stick and started up the box with it's new HDD and Ethernet card. The BIOS has no option to boot from USB. Ah yes, it's 10 years old.
  1. Instead of wasting 2 CDs on disc images which would be obsolete in 6 months, I burned a copy of [Plop Boot Manager](http://www.plop.at/en/bootmanager/index.html) onto CD so I could always have the option of booting from USB in the future.
  1. From the Live CD I confirmed that the PCI Ethernet card worked, and then installed the new 14.04 edition from USB.
 
 <a id="installation"></a>
-##Router Installation
+## Router Installation
 
 At this point the fun begins. If you're following this as a guide, you should have a modern installation of Ubuntu Server Edition (Debian would probably work too, but no guarantees) with 2 Ethernet cards.
 
 > NOTE: This document is provided "as is" without warranty of any kind. I take no responsibility for any loss or damage arising from the use of this document.
 
-###Network Design
+### Network Design
 
  * My network domain is `lan.example.com`.
  * My router's host name is `pegasus`.
@@ -50,7 +50,7 @@ At this point the fun begins. If you're following this as a guide, you should ha
  	* Subnet: `255.255.255.0`
  	* Broadcast: `192.168.0.255`
 
-###Install the stuff
+### Install the stuff
 
 	$ sudo apt-get install bind9 isc-dhcp-server ufw fail2ban
 
@@ -61,7 +61,7 @@ At this point the fun begins. If you're following this as a guide, you should ha
 
 At this point, you should unplug from the internet, or you are going to confuse your existing network.
 
-###Configure Hostname
+### Configure Hostname
 Edit `/etc/hosts`
 
 {% highlight bash %}
@@ -72,7 +72,7 @@ Edit `/etc/hosts`
 
 {% endhighlight %}
 
-###Configure Network Interfaces
+### Configure Network Interfaces
 
 Edit `/etc/network/interfaces`
 
@@ -99,7 +99,7 @@ iface eth1 inet static
 
 {% endhighlight %}
 
-###Configure DNS
+### Configure DNS
 Edit `/etc/bind/named.conf.options`
 
 {% highlight bash %}
@@ -130,7 +130,7 @@ options {
 
 {% endhighlight %}
 
-####Dynamic Updating DNS
+#### Dynamic Updating DNS
 
 To get DHCP to update DNS automatically, you have to set up a cryptographic hash for the DNS and DHCP services to share.
 
@@ -139,7 +139,7 @@ To get DHCP to update DNS automatically, you have to set up a cryptographic hash
 
 This will create a file `/etc/bind/rndc.key`.
 
-####Create DNS Zones
+#### Create DNS Zones
 
 Edit `/etc/bind/named.conf.local`
 
@@ -234,7 +234,7 @@ Edit `/etc/default/bind9` and set:
 
 	RESOLVCONF=yes
 
-###Configure DHCP
+### Configure DHCP
 
 Edit `/etc/default/isc-dhcp-server`
 
@@ -289,7 +289,7 @@ log-facility local7;
 
 {% endhighlight %}
 
-###Configure UFW
+### Configure UFW
 
 Set defaults:
 
@@ -301,7 +301,7 @@ And allow traffic from the local network:
 	$ sudo ufw allow from 192.168.0.255
 
 
-####Allow Forwarding
+#### Allow Forwarding
 
 Edit `/etc/ufw/sysctl.conf` and set the following:
 
@@ -331,14 +331,14 @@ COMMIT
 
 {% endhighlight %}
 
-###Configure Fail2Ban
+### Configure Fail2Ban
 
 	$ sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 	$ sudo cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
 
 Edit `/etc/fail2ban/jail.local` and enable or disable the jails based on the services you are running on the server. Some log file locations need to be updated.
 
-####Severly Ban Persistent Attackers
+#### Severly Ban Persistent Attackers
 
 Taken verbatim from: <http://whyscream.net/wiki/index.php/Fail2ban_monitoring_Fail2ban>
 
@@ -396,7 +396,7 @@ bantime = 604800
 
 {% endhighlight %}
 
-###Restart the services
+### Restart the services
 
 Unplug your old router, plug in your new super router and restart your services.
 
@@ -406,7 +406,7 @@ Unplug your old router, plug in your new super router and restart your services.
 	$ sudo service fail2ban restart
 	$ sudo ufw disable && sudo ufw enable
 
-##Sources
+## Sources
 
  * <http://blog.bigdinosaur.org/running-bind9-and-isc-dhcp/>
  * <https://help.ubuntu.com/community/Router>
